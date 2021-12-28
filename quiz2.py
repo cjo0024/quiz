@@ -26,10 +26,48 @@ f.close()
 #   파이썬 코드 파일을 추가로 생성하지 않습니다. 
 #   상단 코드는 하단의 코드로 결과를 확인할 수 있는 한 마음껏 수정하셔도 됩니다.
 
-# {코드 작성 시작} 
+# {코드 작성 시작}
+
+'''
+1
+100
+20
+3
+226
+'''
+
+#lines_ = f.readlines()
+save_results = ""
+initial_value = 1
+for line_number, line_contents in enumerate(lines):
+  value = float(line_contents)
+
+  if line_number == 0 :
+    initial_value =value
+    #print(line_number, value, "init val")
+
+  else:
+    if value % 3 == 0 :
+      initial_value = initial_value * value
+      #print(line_number, value, "multi")
+    elif value % 10 == 0 :
+      initial_value = initial_value - value
+      #print(line_number, value, "minus")
+    elif (value % 2 == 1) and (value % 3 == 1):
+      initial_value = initial_value / float(value)
+      #print(line_number, value, "div")
+    else:
+      initial_value = initial_value + value
+      #print(line_number, value, "plus")
+#print(initial_value)
+
+fw = open('data/quiz2.txt', mode='w')
+fw.write(str(initial_value)+'\n')
+for line_contents in lines:
+  fw.write(line_contents)
+fw.close()
 
 # {코드 작성 완료}
-
 f = open('data/quiz2.txt', mode='r')
 print(f.read())
 f.close()

@@ -17,7 +17,13 @@ print(nums)
 #   파이썬 코드 파일을 추가로 생성하지 않습니다. 
 #   상단, 하단에 기존 코드를 수정하지 않습니다.
 
-# {코드 작성 시작} 
+# {코드 작성 시작}
+for i in range(len(nums)):
+  for j in range(i+1, len(nums)):
+    if nums[i] > nums[j] :
+      tmp = nums[i]
+      nums[i] = nums[j]
+      nums[j] = tmp
 
 # {코드 작성 완료}
 

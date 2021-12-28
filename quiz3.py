@@ -13,7 +13,23 @@ import time
 #   파이썬 코드 파일을 추가로 생성하지 않습니다. 
 #   하단의 코드는 수정하지 않습니다.
 
-# {코드 작성 시작} 
+# {코드 작성 시작}
+def select_random():
+    t = time.time()
+
+    return 1
+
+
+select_random()
+selected_nums = []
+for i in range(6):
+    selected_nums.append( select_random() )
+
+#f = open('data/quiz3.txt', mode='w')
+#f.write(selected_nums[0]+" "+selected_nums[1]+" "+selected_nums[2]+" "+selected_nums[3] +" "
+#        selected_nums[4]+ " "+selected_nums[5]+" "+ selected_nums[6])
+
+
 
 # {코드 작성 완료}
 
